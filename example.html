@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMMA CHETHI VANTA - Fine Dining Experience</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left:-400px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero section styles */
+        .hero {
+            background-image: url("img.png");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #e74c3c;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Menu section styles */
+        .menu {
+            padding: 4rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .menu h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .dishes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .dish {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .dish img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .dish-info {
+            padding: 1rem;
+        }
+        .dish-info h3 {
+            margin-bottom: 0.5rem;
+        }
+        .dish-info p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        .price {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        /* About section styles */
+        .about {
+            background-color: #f4f4f4;
+            padding: 4rem 1rem;
+        }
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-links {
+            margin-top: 1rem;
+        }
+        .footer-links a {
+            margin: 0 0.5rem;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+        .ban{
+            
+           height: 75px;
+           width: 75px;
+           
+        }
+       
+            .contact {
+                background-color: #f4f4f4;
+                padding: 4rem 1rem;
+                text-align: center;
+            }
+            .contact h2 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+            .contact p {
+                margin-bottom: 2rem;
+                color: #666;
+            }
+            .contact-form {
+                max-width: 600px;
+                margin: 0 auto;
+                text-align: left;
+            }
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+            .form-group label {
+                display: block;
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+            }
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 0.8rem;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .form-group textarea {
+                resize: vertical;
+            }
+            .btn {
+                background-color: #e74c3c;
+                color: #fff;
+                padding: 0.8rem 1.5rem;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            .btn:hover {
+                background-color: #c0392b;
+            }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="ban" src="logo2.png" alt="Logo">
+            <div class="logo">AMMA CHETHI VANTA</div>
+            <div class="nav-links">
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to AMMA CHETHI VANTA</h1>
+                <p>AMMA CHETHI VANTA is a charming Telugu restaurant dedicated to serving authentic home-cooked meals from the vibrant regions of Andhra Pradesh and Telangana. With a menu brimming with traditional flavors, the restaurant offers a delightful array of dishes, including spicy curries, fragrant rice preparations, and a variety of vegetarian and non-vegetarian options, all made from high-quality, locally-sourced ingredients. Each dish is crafted with care, reflecting the rich culinary heritage of Telugu cooking. The restaurant's warm and inviting atmosphere is designed to evoke nostalgia, reminding patrons of the comforting meals enjoyed at home. Whether you're looking for a quick bite or a leisurely dining experience with family and friends, AMMA CHETHI VANTA provides the perfect setting. With its commitment to authenticity and quality, it promises a memorable culinary journey that celebrates the essence of Telugu culture, making it a must-visit destination for food lovers and families alike.</p>
+                <a href="#" class="btn">Book a Table</a>
+            </div>
+        </section>
+        
+
+        <section id="menu" class="menu">
+            <h2>Our Signature Dishes</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="dosa.jpeg" alt="dosa">
+                    <div class="dish-info">
+                        <h3>DOSA</h3>
+                        <p>Dosa is a popular South Indian dish made from a fermented batter of rice and urad dal (black lentils). It's a thin, crispy crepe, often served with chutney and sambar, making it a flavorful, savory meal enjoyed across India and beyond</p>
+                        <span class="price">Rs 50/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="idly.jpeg" alt="idly">
+                    <div class="dish-info">
+                        <h3>IDLY</h3>
+                        <p>Idly is a soft, fluffy, and steamed South Indian breakfast dish made from fermented rice and urad dal (black lentils) batter. It is typically served with coconut chutney and sambar, offering a light and healthy meal</p>
+                        <span class="price">Rs 50/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="poori.jpeg" alt="poori">
+                    <div class="dish-info">
+                        <h3>POORI</h3>
+                        <p>Poori is a popular Indian deep-fried bread made from unleavened wheat flour dough. It is soft, fluffy, and golden-brown, typically served with potato curry, chole, or other side dishes, making for a flavorful meal</p>
+                        <span class="price">Rs 50/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="upma.jpeg" alt="upma">
+                    <div class="dish-info">
+                        <h3>UPMA</h3>
+                        <p>Upma is a traditional South Indian breakfast dish made from semolina (rava) sautéed with spices, vegetables, and water. It's a simple, savory, and wholesome dish, often garnished with curry leaves, mustard seeds, and nuts</p>
+                        <span class="price">Rs 60/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="tea.jpeg" alt="tea">
+                    <div class="dish-info">
+                        <h3>TEA</h3>
+                        <p>Tea is a popular aromatic beverage made by steeping cured or fresh tea leaves in hot water. It's enjoyed worldwide for its soothing taste, energizing caffeine content, and potential health benefits</p>
+                        <span class="price">Rs 10/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="eggrice.jpeg" alt="eggrice">
+                    <div class="dish-info">
+                        <h3>EGG FRIED RICE</h3>
+                        <p>Egg fried rice is a flavorful dish made by stir-frying rice with scrambled eggs, vegetables, and seasonings like soy sauce. It’s a quick, savory meal that balances protein and carbohydrates, often enjoyed as a standalone dish or a side</p>
+                        <span class="price">Rs 80/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="manchuria.jpeg" alt="manchuria">
+                    <div class="dish-info">
+                        <h3>VEG MANCHURIA</h3>
+                        <p>Veg Gobi Manchurian is a popular Indo-Chinese dish made from crispy, batter-fried cauliflower florets tossed in a spicy, tangy sauce with garlic, soy sauce, and chili. It's a flavorful fusion dish, perfect as a snack or appetizer</p>
+                        <span class="price">Rs 80/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="noodles.jpeg" alt="noodles">
+                    <div class="dish-info">
+                        <h3>EGG NOODLES</h3>
+                        <p>Egg noodles are a versatile pasta made from wheat flour and eggs, giving them a rich flavor and smooth texture. They are commonly used in various dishes, including stir-fries, soups, and casseroles, and can be served with a variety of sauces and toppings</p>
+                        <span class="price">Rs 80/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="chickenbiryani.jpeg" alt="chickenbiryani">
+                    <div class="dish-info">
+                        <h3>CHICKEN BIRYANI</h3>
+                        <p>Chicken Biryani is a fragrant and flavorful rice dish made with marinated chicken, basmati rice, and a blend of aromatic spices. Originating from South Asian cuisine, this one-pot meal features tender chicken cooked with spices like saffron, cardamom, and cloves, layered with partially cooked rice and then finished in a sealed pot to allow the flavors to meld</p>
+                        <span class="price">Rs 160/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="muttonbiryani.jpeg" alt="muttonbiryani">
+                    <div class="dish-info">
+                        <h3>MUTTON BIRYANI</h3>
+                        <p>Mutton Biryani is a rich and aromatic rice dish made with tender pieces of marinated mutton, fragrant basmati rice, and a blend of spices. This classic dish, popular in South Asian cuisine, features slow-cooked mutton that absorbs the flavors of spices like cardamom, cloves, and cinnamon</p>
+                        <span class="price">Rs 220/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="vegmeals.jpeg" alt="vegmeals">
+                    <div class="dish-info">
+                        <h3>VEG MEALS</h3>
+                        <p>Veg meals typically consist of a variety of plant-based dishes that celebrate the flavors and textures of vegetables, legumes, grains, and spices. These meals often include staples like rice or chapati, accompanied by curries, stir-fries, and salads made from fresh, seasonal ingredients</p>
+                        <span class="price">Rs 150/-</span>
+                    </div>
+                </div>
+                <div class="dish">
+                    <img src="rotichicken.jpeg" alt="rotichicken">
+                    <div class="dish-info">
+                        <h3>CHICKEN-ROTIES</h3>
+                        <p>Chicken and roties is a popular dish that combines succulent pieces of marinated or spiced chicken with soft, freshly made Indian flatbreads known as roties or chapatis. The chicken is often cooked in a flavorful gravy or curry, infused with aromatic spices such as cumin, coriander, and garam masala, making it rich and savory</p>
+                        <span class="price">Rs 180/-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Amma Chethi Vanta</h2>
+                    <p>Amma Chethi Vanta is a cozy and inviting restaurant that celebrates the rich culinary traditions of Telugu cuisine. The name translates to "Mother's Kitchen," embodying the essence of home-cooked meals prepared with love and care. The restaurant specializes in authentic dishes from Andhra Pradesh and Telangana, featuring a wide variety of flavorful options that highlight the region's unique spices and ingredients.
+
+                        With a warm and welcoming atmosphere, Amma Chethi Vanta aims to provide diners with a nostalgic dining experience reminiscent of cherished family meals. From spicy curries and fresh vegetable preparations to comforting rice dishes and traditional snacks, each dish is crafted using locally-sourced ingredients, ensuring the freshest flavors. The restaurant prides itself on its commitment to quality and authenticity, making it a perfect destination for those seeking a true taste of Telugu heritage. Whether you are enjoying a hearty meal with family or grabbing a quick bite, Amma Chethi Vanta promises a delightful culinary journey that warms the heart and soul.</p>
+                </div>
+                <div class="about-image">
+                    <img src="inter.png" alt="Restaurant interior">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+        </div>
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Feel free to reach out with any questions, feedback, or inquiries.</p>
+            <form action="#" method="post" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 AMMA CHETHI VANTA. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+        
+        
+    </footer>
+</body>
+</html>
